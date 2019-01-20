@@ -8,7 +8,7 @@ L_DISTANCE = 2
 # clf = neighbors.KNeighborsClassifier(NUM_NEIGHBORS, p=L_DISTANCE)
 # clf.fit(x_train, y_train)
 
-class Voice_Rec(object):
+class Voice_Rec_NN(object):
     def __init__(self, x_train, y_train):
         self.clf = neighbors.KNeighborsClassifier(NUM_NEIGHBORS, p=L_DISTANCE)
         self.clf.fit(x_train, y_train)
@@ -23,5 +23,5 @@ if __name__ == "__main__":
     y_train = np.array([1, 1, 2, 2])
     print(x_train.shape)
     print(y_train.shape)
-    mine = Voice_Rec(x_train, y_train)
+    mine = Voice_Rec_NN(x_train, y_train)
     print(mine.predict(np.array([[3]])))
